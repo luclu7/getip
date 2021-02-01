@@ -11,7 +11,7 @@ type IPAPI struct {
 	IPVersion string `json:"ip_version"`
 	IP        string `json:"ip"`
 	Hostname  string `json:"hostname"`
-	Isp       string `json:"isp"`
+	Isp       string `json:"as_org"`
 }
 
 func main() {
