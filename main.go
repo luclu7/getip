@@ -11,6 +11,7 @@ type IPAPI struct {
 	IPVersion string `json:"ip_version"`
 	IP        string `json:"ip"`
 	Hostname  string `json:"hostname"`
+	ASN       string `json:"asn"`
 	Isp       string `json:"as_org"`
 }
 
@@ -28,5 +29,5 @@ func main() {
 	json.Unmarshal(body, &ip)
 
 	fmt.Printf("%s: %s (%s)\n", ip.IPVersion, ip.IP, ip.Hostname)
-	fmt.Printf("From %s\n", ip.Isp)
+	fmt.Printf("From %s (%s)\n", ip.Isp, ip.ASN)
 }
